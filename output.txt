@@ -1,0 +1,205 @@
+Started by user unknown or anonymous
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\DevOps assignment
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/Yashika1410/UserService.git
+ > git.exe init C:\Program Files (x86)\Jenkins\workspace\DevOps assignment # timeout=10
+Fetching upstream changes from https://github.com/Yashika1410/UserService.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.39.0.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/Yashika1410/UserService.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/Yashika1410/UserService.git # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 8817d953ef31b08caebc844913bb5917706c929d (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 8817d953ef31b08caebc844913bb5917706c929d # timeout=10
+Commit message: "Update Dockerfile"
+ > git.exe rev-list --no-walk 8817d953ef31b08caebc844913bb5917706c929d # timeout=10
+[DevOps assignment] $ cmd.exe /C "D:\maven\apache-maven-3.8.6\bin\mvn.cmd clean install && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.example.user:userService >--------------------
+[INFO] Building userService 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.2.0:clean (default-clean) @ userService ---
+[INFO] Deleting C:\Program Files (x86)\Jenkins\workspace\DevOps assignment\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ userService ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:compile (default-compile) @ userService ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to C:\Program Files (x86)\Jenkins\workspace\DevOps assignment\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ userService ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory C:\Program Files (x86)\Jenkins\workspace\DevOps assignment\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:testCompile (default-testCompile) @ userService ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Program Files (x86)\Jenkins\workspace\DevOps assignment\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ userService ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.user.userService.UserServiceApplicationTests
+15:30:22.698 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+15:30:22.709 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+15:30:22.748 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.user.userService.UserServiceApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+15:30:22.762 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.user.userService.UserServiceApplicationTests], using SpringBootContextLoader
+15:30:22.767 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.user.userService.UserServiceApplicationTests]: class path resource [com/example/user/userService/UserServiceApplicationTests-context.xml] does not exist
+15:30:22.767 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.user.userService.UserServiceApplicationTests]: class path resource [com/example/user/userService/UserServiceApplicationTestsContext.groovy] does not exist
+15:30:22.767 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.user.userService.UserServiceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:30:22.768 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.user.userService.UserServiceApplicationTests]: UserServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:30:22.807 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.user.userService.UserServiceApplicationTests]
+15:30:22.891 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Program Files (x86)\Jenkins\workspace\DevOps assignment\target\classes\com\example\user\userService\UserServiceApplication.class]
+15:30:22.894 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.user.userService.UserServiceApplication for test class com.example.user.userService.UserServiceApplicationTests
+15:30:23.006 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.user.userService.UserServiceApplicationTests]: using defaults.
+15:30:23.009 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+15:30:23.020 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+15:30:23.021 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+15:30:23.021 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1b2c4efb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@c35172e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@c2db68f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3cc41abc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4566d049, org.springframework.test.context.support.DirtiesContextTestExecutionListener@61ce23ac, org.springframework.test.context.event.EventPublishingTestExecutionListener@3668d4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1c3b9394, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6f2cfcc2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7f6f61c8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4c2cc639, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@ccb4b1b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4097cac]
+15:30:23.028 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3c9bfddc testClass = UserServiceApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1a9c38eb testClass = UserServiceApplicationTests, locations = '{}', classes = '{class com.example.user.userService.UserServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3e62d773, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3f1d2e23, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@51bf5add, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@2462cb01, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@791d1f8b, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@769f71a9], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::       (v2.7.8-SNAPSHOT)
+
+2023-01-04 15:30:23.510  INFO 10340 --- [           main] c.e.u.u.UserServiceApplicationTests      : Starting UserServiceApplicationTests using Java 11.0.1 on IN-PG02P4XR with PID 10340 (started by IN-PG02P4XR$ in C:\Program Files (x86)\Jenkins\workspace\DevOps assignment)
+2023-01-04 15:30:23.512  INFO 10340 --- [           main] c.e.u.u.UserServiceApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2023-01-04 15:30:25.659  INFO 10340 --- [           main] c.e.u.u.UserServiceApplicationTests      : Started UserServiceApplicationTests in 2.592 seconds (JVM running for 3.804)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.615 s - in com.example.user.userService.UserServiceApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.2:jar (default-jar) @ userService ---
+[INFO] Building jar: C:\Program Files (x86)\Jenkins\workspace\DevOps assignment\target\userService-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.7.8-SNAPSHOT:repackage (repackage) @ userService ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ userService ---
+[INFO] Installing C:\Program Files (x86)\Jenkins\workspace\DevOps assignment\target\userService-0.0.1-SNAPSHOT.jar to C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\example\user\userService\0.0.1-SNAPSHOT\userService-0.0.1-SNAPSHOT.jar
+[INFO] Installing C:\Program Files (x86)\Jenkins\workspace\DevOps assignment\pom.xml to C:\WINDOWS\system32\config\systemprofile\.m2\repository\com\example\user\userService\0.0.1-SNAPSHOT\userService-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  32.512 s
+[INFO] Finished at: 2023-01-04T15:30:34+05:30
+[INFO] ------------------------------------------------------------------------
+Docker Build
+Docker Build: building image at path C:\Program Files (x86)\Jenkins\workspace\DevOps assignment
+Step 1/4 : FROM openjdk:11
+
+
+ ---> 47a932d998b7
+
+Step 2/4 : EXPOSE 5000
+
+
+ ---> Using cache
+
+ ---> 0de85c3d0f76
+
+Step 3/4 : ADD ./target/userService-0.0.1-SNAPSHOT.jar userService-0.0.1-SNAPSHOT.jar
+
+
+ ---> ed858a12aed9
+
+Step 4/4 : ENTRYPOINT ["java","-jar","userService-0.0.1-SNAPSHOT.jar"]
+
+
+ ---> Running in 20c9297598d6
+
+Removing intermediate container 20c9297598d6
+
+ ---> b045112b364b
+
+Successfully built b045112b364b
+
+Tagging built image with yashika1410/devops_assignment:latest
+Docker Build Response : b045112b364b
+Pushing [yashika1410/devops_assignment:latest]
+The push refers to repository [docker.io/yashika1410/devops_assignment]
+6c670112ae42: Preparing
+7b7f3078e1db: Preparing
+826c3ddbb29c: Preparing
+b626401ef603: Preparing
+9b55156abf26: Preparing
+293d5db30c9f: Preparing
+03127cdb479b: Preparing
+9c742cd6c7a5: Preparing
+293d5db30c9f: Waiting
+03127cdb479b: Waiting
+9c742cd6c7a5: Waiting
+826c3ddbb29c: Layer already exists
+9b55156abf26: Layer already exists
+b626401ef603: Layer already exists
+7b7f3078e1db: Layer already exists
+6c670112ae42: Pushing  197.1kB/17.65MB
+293d5db30c9f: Layer already exists
+6c670112ae42: Pushing  393.7kB/17.65MB
+03127cdb479b: Layer already exists
+9c742cd6c7a5: Layer already exists
+6c670112ae42: Pushing  590.3kB/17.65MB
+6c670112ae42: Pushing  786.9kB/17.65MB
+6c670112ae42: Pushing   1.18MB/17.65MB
+6c670112ae42: Pushing  2.753MB/17.65MB
+6c670112ae42: Pushing  4.326MB/17.65MB
+6c670112ae42: Pushing  6.095MB/17.65MB
+6c670112ae42: Pushing  7.865MB/17.65MB
+6c670112ae42: Pushing  10.62MB/17.65MB
+6c670112ae42: Pushing   11.8MB/17.65MB
+6c670112ae42: Pushing  14.16MB/17.65MB
+6c670112ae42: Pushing  15.73MB/17.65MB
+6c670112ae42: Pushing  17.65MB
+6c670112ae42: Pushed
+latest: digest: sha256:f1f5502690ace5e1ddbce6e9511ed7e01d4d8159cab9eb301bdb2133851c43e9 size: 2007
+Docker Build Done
+Pulling image yashika1410/devops_assignment:latest
+latest:Pulling from yashika1410/devops_assignmentnull:Digest: sha256:f1f5502690ace5e1ddbce6e9511ed7e01d4d8159cab9eb301bdb2133851c43e9null:Status: Image is up to date for yashika1410/devops_assignment:latestStarting container for image yashika1410/devops_assignment:latest
+Started container 0d64517414b99d6cd3587c884826acf307d144981fcebb66e9bcc7a963778b69
+[DevOps assignment] $ cmd /c call C:\WINDOWS\TEMP\jenkins211598188730536060.bat
+
+C:\Program Files (x86)\Jenkins\workspace\DevOps assignment>echo "sleep" 
+"sleep"
+
+C:\Program Files (x86)\Jenkins\workspace\DevOps assignment>ping 127.0.0.1 -n 10  1>null 
+
+C:\Program Files (x86)\Jenkins\workspace\DevOps assignment>exit 0 
+[DevOps assignment] $ cmd /c call C:\WINDOWS\TEMP\jenkins1365544411188689426.bat
+
+C:\Program Files (x86)\Jenkins\workspace\DevOps assignment>curl http://localhost:5000 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100    33  100    33    0     0    351      0 --:--:-- --:--:-- --:--:--   354
+Welcome to spring boot assignment
+C:\Program Files (x86)\Jenkins\workspace\DevOps assignment>exit 0 
+Archiving artifacts
+Stopping all containers
+Stopping container 0d64517414b99d6cd3587c884826acf307d144981fcebb66e9bcc7a963778b69
+Removing container 0d64517414b99d6cd3587c884826acf307d144981fcebb66e9bcc7a963778b69
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] done
+Finished: SUCCESS
